@@ -1,0 +1,96 @@
+.Sticky{
+	.menu{
+		position: relative;
+		padding: 0 10px;
+		z-index: 6;
+		label{
+			position: absolute;
+			display: block;
+			width: 40px;
+			height: 39px;
+			padding: 1px 0 0 0;
+			cursor: pointer;
+			transition: 0.05s linear;
+			border-radius: 3px;
+			background: rgb(232, 232, 232);
+			box-shadow: 2px 2px 3px rgba(100,100,100, 0.8);
+			z-index: 6;
+			.menu-bar{
+				transition: 0.1s linear;
+				width: 30px;
+				height: 3px;
+				margin: 7px 5px;
+				border-radius: 1px;
+				box-shadow: 1px 1px 2px rgba(100,100,100, 0.8);
+				background: $mainColor;
+			}
+		}
+		.expandee{
+			position: absolute;
+			//left: 55px;
+			width: 0;
+			max-height: 0;
+			transition: max-height 0.3s linear;
+			overflow: hidden;
+			background: rgb(232, 232, 232);
+			box-shadow: 1px 1px 2px rgba(100,100,100, 0.8);
+			border-radius: 5px;
+			z-index: 5;
+			ul{
+				list-style-type: none;
+				margin: 0 auto;
+				padding: 20px 0 10px;
+				li{
+					display: block;
+					width: 100%;
+					text-align: center;
+					a{
+						color: $mainColor;
+						height: 20px;
+						display: block;
+						padding: 5px 0 5px 10px;
+						text-decoration: none;
+						&:hover, &.active{
+							cursor: pointer;
+							color: white;
+							background: $mainColor;
+						}
+					}
+				}
+			}
+		}
+
+		#expander{
+			display: none;
+			&:checked ~ .expandee{
+				max-height: 300px;
+				width: 100px;
+				//left: 40px;
+			}
+			&:checked ~ label{
+				background: rgba(56, 56, 56, .8);
+				transform-origin: top left;
+				transform: scale(.5,.5);
+				& > .menu-bar{
+					background: white;
+				}
+				& :nth-child(1){
+					transform: translateY(10px) rotate(45deg);
+				}
+				& :nth-child(2){
+					opacity: 0;
+				}
+				& :nth-child(3){
+					transform: translateY(-10px) rotate(-45deg);
+				}
+			}
+		}
+	}
+	&.sticky{
+		position: fixed;
+		top: 50px;
+		right: 2.5%;
+		left: 2.5%;
+		z-index: 4;
+	}
+}
