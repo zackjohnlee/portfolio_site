@@ -13,6 +13,7 @@ export class Sticky extends Component {
     };
 
     const stickies = document.querySelectorAll('[data-sticky]');
+    
     setInitialHeights(stickies);
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageParallax from 'react-image-parallax2';
+import ImageParallax from '../Parallax';
 
 const GalleryHome = (props) => {
 	//const thisImage = props.image;
@@ -7,7 +7,7 @@ const GalleryHome = (props) => {
 		<div className="gallery-item">
 			<div className="image-container">
 				<ImageParallax 
-					reduceHeight={1/4} 
+					reduceHeight={.25} 
 					src={require("../../images/" + props.image + ".jpg")}/>
 			</div>
 			<div className="description">

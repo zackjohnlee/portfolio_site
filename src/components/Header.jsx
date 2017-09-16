@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import {Sticky} from './ui/sticky.js';
-import ImageParallax from 'react-image-parallax2';
+import ImageParallax from './Parallax';
 
 const Header = () => (  
 	<header >
@@ -14,7 +14,7 @@ const Header = () => (
 			</ul>
 		</Sticky>
 		<div className="image-container">
-			<ImageParallax alt="Hero" reduceHeight={1/3} src={require("../images/zackarteles.jpg")} />
+			<ImageParallax alt="Hero" reduceHeight={1/4} src={require("../images/zackarteles.jpg")} />
 		</div>
 	</header>
 );
