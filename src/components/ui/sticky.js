@@ -15,9 +15,13 @@ export class Sticky extends Component {
     const stickies = document.querySelectorAll('[data-sticky]');
     setInitialHeights(stickies);
 
+
     document.addEventListener('scroll', () => {
       const top = document.documentElement.scrollTop || document.body.scrollTop;
       const bottom = document.documentElement.scrollHeight || document.body.scrollHeight;
+      console.log("top:", top);
+      console.log("bottom:", bottom);
+
       [].forEach.call(stickies, (sticky) => {
         const stickyInitial = parseInt(sticky.getAttribute('data-sticky-initial'), 10);
         const stickyEnter = parseInt(sticky.getAttribute('data-sticky-enter'), 10) || stickyInitial;

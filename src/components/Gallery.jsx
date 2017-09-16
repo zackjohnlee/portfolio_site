@@ -1,6 +1,5 @@
 import React from 'react';
 import NavButton from './ui/navbutton.jsx';
-import Plx from 'react-plx';
 import GalleryContainer from './gallery/GalleryContainer';
 import {galleryHomeData} from '../data/galleryHomeData'
 

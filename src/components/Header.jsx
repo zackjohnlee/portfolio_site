@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import Plx from 'react-plx';
 import {Sticky} from './ui/sticky.js';
+import ImageParallax from 'react-image-parallax2';
 
 const Header = () => (  
 	<header >
@@ -13,28 +13,9 @@ const Header = () => (
 				<li><NavLink exact to="/about">ABOUT</NavLink></li>
 			</ul>
 		</Sticky>
-		<Plx 
-			className="heroParallax"
-			animateWhenNotInViewport={false}
-			parallaxData={
-				[{
-					start: 0,
-					duration: 500,
-					name: 'hero',
-					properties:[
-						{
-						startValue: 0,
-						endValue: 100,
-						unit: '%',
-						property: 'translateY'
-						}
-					]
-				}]
-			}>
-			<div className="image-container">
-				<img alt="Hero" src={require("../images/zackarteles.jpg")} />
-			</div>
-		</Plx>
+		<div className="image-container">
+			<ImageParallax alt="Hero" reduceHeight={1/3} src={require("../images/zackarteles.jpg")} />
+		</div>
 	</header>
 );
 
