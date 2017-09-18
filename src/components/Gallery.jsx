@@ -6,7 +6,6 @@ import {galleryHomeData} from '../data/galleryHomeData'
 const Gallery = ({match}) => { 
 	return(
 		<div className="main-content">
-			<NavButton enter='100' />
 			<div className="page-title">
 				<h1>Selected Works</h1>
 			</div>

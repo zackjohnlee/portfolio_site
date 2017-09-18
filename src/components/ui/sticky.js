@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 export class Sticky extends Component {
-
   componentDidMount() {
     const setInitialHeights = (elements) => {
       [].forEach.call(elements, (sticky) => {
@@ -13,7 +12,7 @@ export class Sticky extends Component {
     };
 
     const stickies = document.querySelectorAll('[data-sticky]');
-    
+
     setInitialHeights(stickies);
 
 

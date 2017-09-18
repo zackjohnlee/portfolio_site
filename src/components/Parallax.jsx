@@ -83,7 +83,6 @@ class ImageParallax extends Component {
       }}>
         <img style={{
           ...style,
-          width: '100%',
           transform: `translate(0, ${transformY * 100}%)`
         }} src={src} {...rest} onLoad={this.onLoad}/>
       </div>
